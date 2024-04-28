@@ -4,8 +4,8 @@ This project boilerplate is for Edge Delivery Services projects that integrate w
 
 ## Environments
 
-- Preview: https://main--{repo}--{owner}.hlx.page/
-- Live: https://main--{repo}--{owner}.hlx.live/
+- Preview: https://main--aem-eds-rnd--ivallogenes.hlx.page/
+- Live: https://main--aem-eds-rnd--ivallogenes.hlx.live/
 
 ## Pre-requisites
 
