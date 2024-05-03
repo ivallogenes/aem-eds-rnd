@@ -2,7 +2,7 @@
 
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: #f6f6f6;
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -21,6 +21,7 @@ header nav {
   height: var(--nav-height);
   padding: 0 16px;
   font-family: var(--type-base-font-family);
+  border-bottom: 1px solid var(--color-neutral-600);
 }
 
 header nav[aria-expanded='true'] {
@@ -250,6 +251,7 @@ header nav .nav-sections ul > li > ul > li {
     margin-top: 12px;
     padding: 1em;
     background-color: var(--color-neutral-500);
+    border: 1px solid var(--color-neutral-600);
     white-space: initial;
   }
 
@@ -262,7 +264,7 @@ header nav .nav-sections ul > li > ul > li {
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid var(--color-neutral-500);
+    border-bottom: 8px solid var(--color-neutral-600);
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
@@ -353,6 +355,10 @@ header .nav-search-panel input {
 
 /* Mini Cart  */
 
+.cart-mini-cart {
+  border: 1px solid var(--color-neutral-600);
+}
+
 .cart-mini-cart:not(:has(.cart-empty-cart)) {
   max-height: 760px;
   min-height: 360px;
@@ -375,7 +381,7 @@ header .nav-search-input .search_autocomplete .popover-container {
   }
 
   header nav .nav-tools-panel {
-    top: calc(-12px + var(--nav-height));
+    top: calc(-24px + var(--nav-height));
   }
 
   header nav .minicart-panel {

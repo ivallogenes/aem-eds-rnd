@@ -12,6 +12,10 @@
   background-color: var(--background-color)
 }
 
+.cards.block li {
+  transition: all 250ms cubic-bezier(.25,.8,.25,1);
+}
+
 .cards .cards-card-body {
   margin: 16px;
 }
@@ -29,3 +33,13 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+@media (width >= 1024px) {
+  .cards.block li:hover {
+    transform: scale(1.1);
+    box-shadow: 0 3px 7px rgba(0,0,0,0.12), 0 3px 7px rgba(0,0,0,0.24);
+  }
+}
+
+/* .cards-card-image:hover {
+} */

@@ -10,7 +10,9 @@
     "start": "aem up --print-index --addr=*",
     "install:dropins": "node postinstall.js",
     "postinstall": "npm run install:dropins",
-    "postupdate": "npm run install:dropins"
+    "postupdate": "npm run install:dropins",
+    "sass": "./node_modules/node-sass/bin/node-sass --output-style compressed ./styles/sass/styles-custom.scss > ./styles/styles-custom.css",
+    "sass:watch": "./node_modules/node-sass/bin/node-sass --watch --recursive --output ./styles --source-map true --source-map-contents ./styles/sass"
   },
   "repository": {
     "type": "git",
@@ -41,6 +43,7 @@
     "@dropins/storefront-checkout": "0.1.0-alpha30",
     "@dropins/storefront-order-confirmation": "0.1.0-alpha19",
     "@dropins/storefront-pdp": "0.2.2-alpha24",
-    "@dropins/tools": "0.21.2"
+    "@dropins/tools": "0.21.2",
+    "node-sass": "^9.0.0"
   }
 }

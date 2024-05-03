@@ -1,6 +1,6 @@
 footer {
   padding: 2rem;
-  background-color: var(--color-neutral-100);
+  background-color: #f6f6f6;
   font: var(--type-body-2-default-font);
   letter-spacing: var(--type-body-2-default-letter-spacing);
 }
@@ -12,4 +12,8 @@ footer .footer {
 
 footer .footer p {
   margin: 0;
+}
+
+footer .default-content-wrapper p:first-child {
+  margin-bottom: 16px;
 }

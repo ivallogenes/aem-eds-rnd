@@ -17,6 +17,7 @@
 
 .columns > div > .columns-img-col img {
   display: block;
+  box-shadow: 0 3px 7px rgba(0,0,0,0.12), 0 3px 7px rgba(0,0,0,0.24);
 }
 
 @media (width >= 900px) {
