@@ -1,4 +1,6 @@
-/* check package.json for commands;
+@import './cms-pages.scss';
+
+/* check package.json for the sass commands;
 this file gets overriten though by the css files in the `blocks` components,
 even though is added last in head.html */
 

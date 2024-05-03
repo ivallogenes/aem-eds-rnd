@@ -1,4 +1,14 @@
-header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
-  background-color: pink; }
+@media (min-width: 1024px) {
+  .page-content-main {
+    max-width: 860px;
+    margin: 0 auto; } }
+
+/* check package.json for the sass commands;
+this file gets overriten though by the css files in the `blocks` components,
+even though is added last in head.html */
+header {
+  /* for test only, otherwise update style in blocks/header */ }
+  header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
+    background-color: pink; }
 
 /*# sourceMappingURL=styles-custom.css.map */
