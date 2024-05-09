@@ -170,13 +170,13 @@ export default async function decorate(block) {
        <div class="minicart-panel nav-tools-panel"></div>
      </div>
    `);
- 
+
    navTools.append(minicart);
- 
+
    const minicartPanel = navTools.querySelector('.minicart-panel');
- 
+
    const cartButton = navTools.querySelector('.nav-cart-button');
- 
+
    if (excludeMiniCartFromPaths.includes(window.location.pathname)) {
      cartButton.style.display = 'none';
    }
@@ -227,8 +227,16 @@ export default async function decorate(block) {
     </div>
   </div>
   `);
+  // search mask
+  const searchMask = document.createRange().createContextualFragment(`
+  <div id="bgr-mask" class="hide"></div>
+  `);
 
   navTools.append(search);
+
+  const body = document.querySelector('body');
+  const mainEl = document.querySelector('main');
+  body.insertBefore(searchMask, mainEl);
 
   const searchPanel = navTools.querySelector('.nav-search-panel');
 
@@ -236,15 +244,20 @@ export default async function decorate(block) {
 
   const searchInput = searchPanel.querySelector('input');
 
+  const bgrMask = document.querySelector('#bgr-mask');
+
   async function toggleSearch(state) {
     const show =
       state ?? !searchPanel.classList.contains('nav-tools-panel--show');
 
     searchPanel.classList.toggle('nav-tools-panel--show', show);
 
+    bgrMask.className = 'hide';
+
     if (show) {
       await import('./searchbar.js');
       searchInput.focus();
+      bgrMask.className = 'show';
     }
   }
 
