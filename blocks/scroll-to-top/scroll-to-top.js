@@ -8,7 +8,6 @@ const interval = setInterval(() => {
   }
 }, 1000);
 
-
 const scrollTopAdd = () => {
   const isDesktop = window.matchMedia('(min-width: 640px)');
   const scrollTopBtn = document.querySelector('[data-block-name="scroll-to-top"]');

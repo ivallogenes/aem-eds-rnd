@@ -6,22 +6,10 @@
 this file gets overriten though by the css files in the `blocks` components,
 even though is added last in head.html */
 
-header {
-  /* for test only, otherwise update style in blocks/header */
-  nav {
-    .nav-sections {
-      .default-content-wrapper {
-        > ul > li[aria-expanded='true'] > ul {
-          background-color: pink;
-        }
-      }
-    }
-  }
-}
-
 /* Typography */
 @media (max-width: 1023px) {
   h1 {
     font-size: 28px;
+    line-height: 1.6;
   }
 }
