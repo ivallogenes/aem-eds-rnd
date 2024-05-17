@@ -374,6 +374,7 @@ main img {
 /* sections */
 main .section {
   padding: var(--spacing-large) var(--spacing-small);
+  word-wrap: break-word;
 }
 
 @media (width >=600px) {

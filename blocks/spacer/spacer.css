@@ -1,0 +1,34 @@
+.spacer-wrapper {
+  .spacer {
+    padding: 0;
+    &.sm {
+      padding: 5px 0;
+    }
+    &.md {
+      padding: 10px 0;
+    }
+    &.lg {
+      padding: 20px 0;
+    }
+    > div {
+      display: none;
+    }
+  }
+}
+/* hardcoded breakpoints in css files pose maintainability issues;
+TODO: replace hardcoded breakpoints with layout vars */
+@media (width >=900px) {
+  .spacer-wrapper {
+    .spacer {
+      &.sm {
+        padding: 10px 0;
+      }
+      &.md {
+        padding: 20px 0;
+      }
+      &.lg {
+        padding: 30px 0;
+      }
+    }
+  }
+}
