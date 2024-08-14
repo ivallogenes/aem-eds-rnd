@@ -93,8 +93,11 @@ function renderItems(block, recommendations) {
     dl.push({ event: 'recs-unit-impression-render', eventInfo: { ...dl.getState(), unitId: recommendation.unitId } });
   });
 
-  // Title
-  block.querySelector('h2').textContent = recommendation.storefrontLabel;
+  // Recommendations Section Title
+  const config = readBlockConfig(block);
+  const { title } = config;
+  const recommendationsTitle = title || recommendation.storefrontLabel;
+  block.querySelector('h2').textContent = recommendationsTitle;
 
   // Grid
   const grid = block.querySelector('.product-grid');
