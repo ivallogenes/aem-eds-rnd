@@ -76,12 +76,12 @@ export default async function decorate(block) {
         });
 
         // Add to Wishlist Button
-        // ctx.appendButton(() => ({
-        //   icon: 'Heart',
-        //   variant: 'secondary',
-        //   text: 'Add to Wishlist',
-        //   onClick: () => console.debug('Add to Wishlist', ctx.data),
-        // }));
+        ctx.appendButton(() => ({
+          icon: 'Heart',
+          variant: 'secondary',
+          text: 'Add to Wishlist',
+          onClick: () => console.log('Add to Wishlist', ctx.data),
+        }));
       },
     },
   })(block);
