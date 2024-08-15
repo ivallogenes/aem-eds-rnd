@@ -1,3 +1,9 @@
+.product-recommendations-container {
+    max-width: 1264px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 main .section>div.product-recommendations-wrapper {
     max-width: 100%;
     padding: 0;
@@ -8,6 +14,13 @@ main .section>div.product-recommendations-wrapper {
 .product-recommendations {
     overflow: hidden;
     min-height: 512px;
+}
+
+.product-recommendations h2 {
+    font-family: poppins;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2;
 }
 
 .product-recommendations .scrollable {
@@ -21,6 +34,7 @@ main .section>div.product-recommendations-wrapper {
     flex-wrap: nowrap;
     gap: 2rem;
     margin: 0;
+    padding: 10px;
 }
 
 .product-recommendations .product-grid-item img {
@@ -40,8 +54,13 @@ main .section>div.product-recommendations-wrapper {
     overflow: hidden;
     box-sizing: border-box;
     margin: 0;
-    padding: .5rem 1rem 0 0;
+    padding: 1rem;
     display: inline-block;
+    font-family: 'poppins';
+    font-weight: 500;
+    font-size: 18px;
+    color: black;
+    text-align: center;
 }
 
 .product-recommendations .product-grid picture {
@@ -57,6 +76,11 @@ main .section>div.product-recommendations-wrapper {
     width: 100%;
     object-fit: contain;
     background: none;
+    transition: all 250ms cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &:hover {
+        transform: scale(.9);
+    }
 }
 
 .product-recommendations .product-grid .placeholder {
@@ -71,10 +95,25 @@ main .section>div.product-recommendations-wrapper {
 .product-recommendations .product-grid-item {
     margin: 0;
     scroll-snap-align: start;
+    transition: all 250ms cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &:hover {
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.12), 0 3px 7px rgba(0, 0, 0, 0.24);
+    }
+}
+
+.pdp-product__title {
+    font-family: 'poppins';
+    font-weight: 500;
 }
 
 @media (width >= 900px) {
     .product-recommendations {
         min-height: 534px;
+
+        h2 {
+            font-size: 35px;
+            line-height: 1.4;
+        }
     }
 }

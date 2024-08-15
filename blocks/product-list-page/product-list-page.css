@@ -8,6 +8,11 @@
     object-fit: contain;
 }
 
+/* Hide empty divs */
+.product-list-page-wrapper div:empty {
+    display: none;
+}
+
 @media (width >= 750px) {
     .product-list-page {
         min-height: auto;

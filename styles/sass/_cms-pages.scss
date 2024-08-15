@@ -1,6 +1,22 @@
 .section {
   &.highlight-banner {
     background-image: linear-gradient(45deg, transparent, $color-olive-green);
+    padding: 24px;
+
+    p {
+      font-family: 'poppins';
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 1.2;
+      margin: 0;
+
+      &.button-container {
+        margin-top: 24px;
+        a {
+          margin: 0;
+        }
+      }
+    }
 
     .columns > div > .columns-img-col img {
       box-shadow: none;
@@ -39,6 +55,9 @@
           transform: none;
         }
       }
+    }
+    &.highlight-banner {
+      padding: 48px;
     }
   }
 }
