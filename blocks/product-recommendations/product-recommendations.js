@@ -44,12 +44,12 @@ const recommendationsQuery = `query GetRecommendations(
 let recommendationsPromise;
 
 function renderPlaceholder(block) {
-  block.innerHTML = `<h2></h2>
+  block.innerHTML = `<h2>Browse some products to see recommendations below!</h2>
   <div class="scrollable">
     <div class="product-grid">
       ${[...Array(5)].map(() => `
         <div class="placeholder">
-          <picture><img width="300" height="375" src="" /></picture>
+          <picture><img width="250" height="275" src="" /></picture>
         </div>
       `).join('')}
     </div>
@@ -69,8 +69,8 @@ function renderItem(unitId, product) {
   const item = document.createRange().createContextualFragment(`<div class="product-grid-item">
     <a href="/products/${urlKey}/${product.sku.toLowerCase()}">
       <picture>
-        <source type="image/webp" srcset="${image}?width=300&format=webply&optimize=medium" />
-        <img loading="lazy" alt="${product.name}" width="300" height="375" src="${image}?width=300&format=jpg&optimize=medium" />
+        <source type="image/webp" srcset="${image}?width=250&format=webply&optimize=medium" />
+        <img loading="lazy" alt="${product.name}" width="250" height="275" src="${image}?width=250&format=jpg&optimize=medium" />
       </picture>
       <span>${product.name}</span>
     </a>
@@ -94,9 +94,8 @@ function renderItems(block, recommendations) {
   });
 
   // Recommendations Section Title
-  const config = readBlockConfig(block);
-  const { title } = config;
-  const recommendationsTitle = title || recommendation.storefrontLabel;
+  const getCustomTitle = document.querySelector('[data-recommendations-section-title]').getAttribute('data-recommendations-section-title');
+  const recommendationsTitle = getCustomTitle || recommendation.storefrontLabel;
   block.querySelector('h2').textContent = recommendationsTitle;
 
   // Grid
