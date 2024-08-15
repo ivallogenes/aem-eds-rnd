@@ -63,7 +63,18 @@ header nav .nav-search-input.nav-search-panel.nav-tools-panel form input:focus {
             background-color: #ff943a; } }
 
 .section.highlight-banner {
-  background-image: linear-gradient(45deg, transparent, #B5B812); }
+  background-image: linear-gradient(45deg, transparent, #B5B812);
+  padding: 24px; }
+  .section.highlight-banner p {
+    font-family: 'poppins';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.2;
+    margin: 0; }
+    .section.highlight-banner p.button-container {
+      margin-top: 24px; }
+      .section.highlight-banner p.button-container a {
+        margin: 0; }
   .section.highlight-banner .columns > div > .columns-img-col img {
     box-shadow: none; }
 
@@ -81,7 +92,9 @@ header nav .nav-search-input.nav-search-panel.nav-tools-panel form input:focus {
     max-width: 860px;
     margin: 0 auto; }
   .section.style-2.cards-container .cards.block li:hover {
-    transform: none; } }
+    transform: none; }
+  .section.highlight-banner {
+    padding: 48px; } }
 
 /* check package.json for the sass commands;
 this file gets overriten though by the css files in the `blocks` components,

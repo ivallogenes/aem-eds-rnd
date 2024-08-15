@@ -214,6 +214,16 @@ h6 {
   letter-spacing: var(--type-headline-2-default-letter-spacing);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: poppins;
+  margin: 16px 0;
+}
+
 p,
 dl,
 ol,
@@ -373,13 +383,31 @@ main img {
 
 /* sections */
 main .section {
-  padding: var(--spacing-large) var(--spacing-small);
+  padding: var(--spacing-big) var(--spacing-small);
   word-wrap: break-word;
+}
+
+/* Typography */
+.ds-sdk-product-item__product-name.font-headline-2-strong {
+  font-family: 'poppins';
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.ds-sdk-product-price .font-headline-2-default {
+  font-size: 15px;
+}
+
+.dropin-price--strikethrough {
+  color: gray;
+}
+.dropin-price--default {
+  color: black;
 }
 
 @media (width >=600px) {
   main .section {
-    padding: var(--spacing-large) var(--spacing-big);
+    padding: var(--spacing-xbig) var(--spacing-big);
   }
 }
 
