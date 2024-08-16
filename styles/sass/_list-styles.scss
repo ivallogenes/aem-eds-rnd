@@ -1,0 +1,57 @@
+.ul-special {
+  display: flex;
+  justify-content: center;
+
+  ul {
+    list-style: none;
+    padding-inline-start: 0;
+    max-width: 800px;
+
+    li {
+      font-family: 'poppins';
+      font-weight: 500;
+      font-size: 16px;
+      padding-left: 30px;
+      margin-bottom: 14px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      line-height: 1.8;
+      cursor: pointer;
+
+      &::before {
+        display: inline-block;
+        content: '';
+        width: 19px;
+        height: 19px;
+        background: url('../../icons/chevron-right.svg') no-repeat center/contain;
+        position: absolute;
+        left: 0;
+        transform: translateX(-5px);
+        transition: all 250ms cubic-bezier(.25,.8,.25,1);
+      }
+      &:hover {
+        &::before {
+          transform: translateX(0);
+        }
+      }
+      &::selection {
+        background: $color-olive-green;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .ul-special {
+    ul {
+      li {
+        font-size: 17px;
+
+        &::before {
+          transform: translateX(-10px);
+        }
+      }
+    }
+  }
+}

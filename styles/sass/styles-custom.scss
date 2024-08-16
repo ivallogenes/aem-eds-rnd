@@ -1,6 +1,7 @@
-@import './_variables.scss';
-@import './_searchbar.scss';
-@import './_cms-pages.scss';
+@import './_variables';
+@import './_searchbar';
+@import './_cms-pages';
+@import './_list-styles';
 
 /* check package.json for the sass commands;
 this file gets overriten though by the css files in the `blocks` components,
