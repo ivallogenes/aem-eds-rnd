@@ -81,7 +81,7 @@ export default function decorate(block) {
   if (activeSlide === 0) {
     slides[0].style.display = 'block';
   }
-  // auto change slides every x miliseconds
+  // auto change slides every xxxx miliseconds
   // pause slides on mouse hover
   function autoSlide() {
     slides[activeSlide].style.display = 'none';
@@ -91,17 +91,17 @@ export default function decorate(block) {
     }
     slides[activeSlide].style.display = 'block';
   }
-  // let autoSlideInterval = setInterval(() => {
-  //   autoSlide()
-  // }, 4000);
-  // bannerSliderContainer.addEventListener('mouseenter', () => {
-  //   clearInterval(autoSlideInterval);
-  // });
-  // bannerSliderContainer.addEventListener('mouseleave', () => {
-  //   autoSlideInterval = setInterval(() => {
-  //     autoSlide()
-  //   }, 4000);
-  // });
+  let autoSlideInterval = setInterval(() => {
+    autoSlide()
+  }, 4000);
+  bannerSliderContainer.addEventListener('mouseenter', () => {
+    clearInterval(autoSlideInterval);
+  });
+  bannerSliderContainer.addEventListener('mouseleave', () => {
+    autoSlideInterval = setInterval(() => {
+      autoSlide()
+    }, 4000);
+  });
 
   // handle slider nav buttons prev and next actions
   sliderNavPrev.addEventListener('click', (e) => {
