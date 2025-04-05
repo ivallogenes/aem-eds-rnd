@@ -58,12 +58,13 @@ export default function decorate(block) {
     img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '800' }]));
   });
 
-  // TO DO: get banner text content and add it to img.alt
+  // get banner item text content and add it to img.alt
   [...block.children].forEach((row) => {
     const textContentArr = row.querySelectorAll('.banner-slider p:first-child');
     textContentArr.forEach((textContent => {
       console.log('textContent : ', textContent.textContent)
-
+      textContent.closest('.banner-item-wrapper').querySelector('img').setAttribute('alt', textContent.textContent);
+      textContent.closest('.banner-item-wrapper').querySelector('img').setAttribute('aria-label', textContent.textContent);
     }));
   });
 
