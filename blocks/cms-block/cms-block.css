@@ -1,0 +1,25 @@
+/* Since the cms block content is fetched from a remote Commerce backend, the cms block already has its html structure and styles defined
+in the Magento code base - styles are in the coupled theme and the html is in the cms block Page builder content. */
+/* However, only the cms block content is fetched and the styles are lost.
+So, we need to have the styles for a cms block in the EDS app code base.. which makes it a bit less flexible to work with. */
+
+.test-cms-block {
+    background-color: #f4f4f4;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    padding: 16px;
+
+    h1,
+    h2 {
+      letter-spacing: 0;
+      text-align: center;
+    }
+}
+
+/* @media screen and (min-width: 768px) {
+
+} */
