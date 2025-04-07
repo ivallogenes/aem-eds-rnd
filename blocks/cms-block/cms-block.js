@@ -10,16 +10,18 @@ export default async function decorate(block) {
 
   useCmsBlock(block, blockid);
 
-  try {
-    const h2 = document.createElement('h2');
-    h2.textContent = 'This cms block is fetched from remote Magento backend using GraphQL';
-    setTimeout(() => {
-      const cmsContent = document.querySelector('.test-cms-block');
+  block.addEventListener('cmsBlockLoaded', (event) => {
+    console.log('CMS block loaded: ', event.detail);
+    // Do something when cms block is loaded.
+    try {
+      const h2 = document.createElement('h2');
+      const cmsContent = document.querySelector(`.${blockid}`);
+      h2.textContent = 'This cms block is fetched from remote Magento backend using GraphQL';
       cmsContent.append(h2);
-    }, 1500);
-  } catch (error) {
-    console.error('.test-cms-block not ready. ', error);
-  }
+    } catch (error) {
+      console.error(`.${blockid} not ready. `, error);
+    }
+  });
 
   console.log('cms-block config: ', blockid);
   console.log('cms-block : ', block);

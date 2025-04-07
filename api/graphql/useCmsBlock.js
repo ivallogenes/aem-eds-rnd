@@ -29,6 +29,11 @@ export default async function useCmsBlock(block, blockId) {
       if (items && items.length > 0) {
           const decodedContent = decodeHtml(items[0].content);
           block.innerHTML = decodedContent;
+          // Emit custom event to notify that CMS block has been loaded.
+          const event = new CustomEvent('cmsBlockLoaded', {
+              detail: { blockId }
+          });
+          block.dispatchEvent(event);
       } else {
           block.innerHTML = '<p>CMS block content not found.</p>';
       }
