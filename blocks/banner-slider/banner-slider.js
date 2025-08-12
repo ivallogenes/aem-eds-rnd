@@ -13,11 +13,9 @@ export default function decorate(block) {
     // TO DO: get the config values for adding font styles and alignment from
     // document-authoring endpoint configSlide1, configSlide2, etc
     const metaConfigsAttrName = row.dataset.configslide + (i + 1);
-    // const metaConfigArr = row.getAttribute(metaConfigsAttrName);
-    console.log('metaConfigsAttrName: ', metaConfigsAttrName)
-    // metaConfigsAttrNames.push("data-configslide" + (i + 1));
-    // console.log('metaConfigsAttrNames : ', metaConfigsAttrNames)
-    // metaConfigsAttrNames.forEach(i => console.log('ATTR: ', row.getAttribute(i)))
+
+    console.log('row.dataset: ', row)
+
 
     while (row.firstElementChild) li.append(row.firstElementChild);
     // add numbered classname to target specific slides with css
