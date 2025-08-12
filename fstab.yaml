@@ -1,7 +1,5 @@
 mountpoints:
-  /:
-    url: https://content.da.live/ivallogenes/aem-eds-rnd/
-    type: markup
+  /: https://drive.google.com/drive/folders/1kIT1MQdIGO2rjlotUIozhig-rkgxWmQA
 
 folders:
   /products/: /products/default
